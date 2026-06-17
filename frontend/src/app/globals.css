@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f7f8;
+  --user-bubble: #2563eb;
+  --assistant-bubble: #ffffff;
+}
+
+body {
+  background: var(--bg);
+}
+
+/* Stylizacja scrollbar czatu */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Markdown w odpowiedziach asystenta */
+.prose-chat p { margin-bottom: 0.75rem; }
+.prose-chat code {
+  background: #f1f5f9;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+.prose-chat pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
+.prose-chat pre code { background: none; padding: 0; }
